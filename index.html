@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Player</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-900 min-h-screen flex items-center justify-center">
+
+    <div class="bg-white rounded-2xl shadow-lg p-4 max-w-sm w-full">
+        <h1 class="text-xl font-bold text-center mb-4">
+            My Video
+        </h1>
+
+        <video
+            id="myVideo"
+            class="w-full rounded-lg"
+            controls
+            preload="auto"
+        >
+            <source src="school-boy.mp4" type="video/mp4">
+            Your browser does not support video playback.
+        </video>
+
+        <div class="flex justify-center gap-3 mt-4">
+            <button
+                onclick="playVideo()"
+                class="bg-green-600 text-white px-4 py-2 rounded-lg"
+            >
+                Play
+            </button>
+
+            <button
+                onclick="pauseVideo()"
+                class="bg-red-600 text-white px-4 py-2 rounded-lg"
+            >
+                Pause
+            </button>
+        </div>
+    </div>
+
+    <script>
+        const video = document.getElementById("myVideo");
+
+        function playVideo() {
+            video.play();
+        }
+
+        function pauseVideo() {
+            video.pause();
+        }
+    </script>
+
+</body>
+</html>
